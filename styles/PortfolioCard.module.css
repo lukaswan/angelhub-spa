@@ -1,0 +1,46 @@
+.card{
+    padding-bottom: 0;
+    border-radius: 0;
+    margin: 2%;
+    background-color: #F2F2F2;
+    border: none;
+}
+/* Card Title */
+.cardTitle{
+    background-color: #D99D26;
+    text-align: left;
+    padding: 2% 6%;
+    font-size: 1.2rem;
+    font-weight: 400;
+    color: white;
+}
+/* Image Section */
+.imageRow{
+    padding: 5% 8%;
+    text-align: center;
+}
+.projectImg{
+    padding: 0;
+    margin: 4% 1%;
+    height: 120px;
+    width: 120px;
+    background-size:cover;
+    }
+
+/* Optional values added to Card */
+.unicorn{
+    font-size: 10px;
+    background-color: #D99D26;
+    color:white;
+}
+.annotation{
+    font-size: 0.5rem;
+    color:white;
+}
+
+@media screen and (max-width:700px) {
+    .imageRow{
+        display: flex;
+        justify-content: center;
+    } 
+}

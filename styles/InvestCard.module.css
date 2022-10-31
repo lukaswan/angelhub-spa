@@ -1,0 +1,56 @@
+.card{
+    width: 100%;
+    height: auto;
+    padding-bottom: 5%;
+    margin: 7% 0%;
+    box-shadow: 9px 6px 33px -5px rgba(0,0,0,0.51);
+    border-radius: 0;
+}
+/* Card Title */
+.hashtag{
+    font-weight: 400;
+    color: white;
+    background-color: #262626;
+    margin: 0;
+    padding: 4%;
+}
+/* Image Section */
+.cardImg{
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    justify-content: end;
+    height: 18vh;
+}
+.cardLogo{
+    position: relative;
+    right: 5%;
+    top: 20%;
+    height: 50px;
+    width: 50px;
+}
+
+/* Card Text */
+.projectName{
+    font-size: 16px;
+}
+.cardBody{
+    padding: 4vh 7% 4vh 7%;
+
+}
+
+/* Footer */
+.investBtn{
+    font-weight: 600;
+    background-color: #D99D26;
+    border-radius: 0%;
+    width: 100%;
+}
+.investBtn:hover{
+    background-color: #262626;
+    color: white;
+}
+.cardFooter{
+    text-align: center;
+    padding: 0% 7% 2% 7%;
+}
