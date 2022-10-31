@@ -1,7 +1,7 @@
 .card{
     padding-bottom: 0;
     border-radius: 0;
-    margin: 2%;
+    margin: 4% 2%;
     background-color: #F2F2F2;
     border: none;
 }
@@ -29,7 +29,8 @@
 
 /* Optional values added to Card */
 .unicorn{
-    font-size: 10px;
+    font-size: 12px;
+    font-weight: 500;
     background-color: #D99D26;
     color:white;
 }

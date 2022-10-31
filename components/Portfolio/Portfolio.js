@@ -155,7 +155,7 @@ export default function Portfolio() {
             {/* Populate 2 cards per column */}
           {successes?dataParser(successes,2).map((row,idx)=>{
             return(
-              <div key={idx} className="col-sm-12 col-lg-6">
+              <div key={idx} className="col-sm-12 col-lg-6 g-0">
                 {row.map((data,idx)=>{
                   return(
                     <PortfolioCard

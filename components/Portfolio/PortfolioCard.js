@@ -22,7 +22,7 @@ export default function SuccessfulPortfolioCard({category,projects}) {
                   {row.map((item,idx) =>{
                     return(
                     <div key={idx} className={`col-sm-4 d-flex-column ${styles.projectImg}`} style={{backgroundImage:`url(${item.image})`}}>
-                    {item.unicorn?<p className={`${styles.unicorn}`}>unicorn</p>:null}
+                    {item.unicorn?<p className={`${styles.unicorn}`}><img src="/images/unicorn.png" alt="Unicorn"/> Unicorn</p>:null}
                     </div>
                   )}
                   )}
