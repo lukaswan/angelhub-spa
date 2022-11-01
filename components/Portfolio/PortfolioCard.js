@@ -14,7 +14,7 @@ export default function SuccessfulPortfolioCard({category,projects}) {
         <div className={`card ${styles.card}`}>
           <div className={`card-title ${styles.cardTitle}`} onClick={handleClick}>{category}</div>
           <div className={toggled?`card-body`:`card-body d-none d-md-block`}>
-            {/* Populate x2/x3 images wide grid */}
+            {/* Populate images grid */}
             <div className={`row ${styles.imageRow}`}>
               {projects?
                 projects.map(((item,idx) => {
