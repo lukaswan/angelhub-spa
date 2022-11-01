@@ -19,9 +19,13 @@ export default function SuccessfulPortfolioCard({category,projects}) {
               {projects?
                 projects.map(((item,idx) => {
                 return(
-                    <div key={idx} className={`col-sm-6 d-flex-column ${styles.projectImg}`} style={{backgroundImage:`url(${item.image})`}}>
-                      {item.unicorn?<p className={`${styles.unicorn}`}><img src="/images/unicorn.png" alt="Unicorn"/> Unicorn</p>:null}
-                    </div>
+                  <>
+                    <a href="#" key={idx} className={`col-sm-6 d-flex-column ${styles.projectImg}`} style={{backgroundImage:`url(${item.image})`}}>
+                      <div>
+                        {item.unicorn?<p className={`${styles.unicorn}`}><img src="/images/unicorn.png" alt="Unicorn"/> Unicorn</p>:null}
+                      </div>
+                    </a>
+                  </>
                 )
                 }))
               :null}
