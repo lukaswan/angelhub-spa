@@ -1,8 +1,7 @@
-import dataParser from "../../utilities/dataParser";
 import styles from "../../styles/PortfolioCard.module.css";
 import { useState } from "react";
 
-export default function SuccessfulPortfolioCard({category,projects}) {
+export default function PortfolioCard({category,projects}) {
 
   //Collapse the div on small screen
   let [toggled, setToggled]=useState(false);
@@ -19,9 +18,14 @@ export default function SuccessfulPortfolioCard({category,projects}) {
               {projects?
                 projects.map(((item,idx) => {
                 return(
-                    <div key={idx} className={`col-sm-6 d-flex-column ${styles.projectImg}`} style={{backgroundImage:`url(${item.image})`}}>
-                      {item.unicorn?<p className={`${styles.unicorn}`}><img src="/images/unicorn.png" alt="Unicorn"/> Unicorn</p>:null}
-                    </div>
+                  <>
+                    <a href="#" key={idx} className={`col-sm-6 d-flex-column ${styles.projectImg}`} style={{backgroundImage:`url(${item.image})`}}>
+                    {item.unicorn?<p className={`${styles.unicorn}`}><img src="/images/unicorn.png" alt="Unicorn"/> Unicorn</p>:null}
+                      <div>
+                        {item.annotation?<p className={`${styles.annotation} align-self-end`}>{item.annotation}</p>:null}
+                      </div>
+                    </a>
+                  </>
                 )
                 }))
               :null}

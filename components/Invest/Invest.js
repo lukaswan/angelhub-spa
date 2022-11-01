@@ -1,6 +1,5 @@
 import InvestCard from "./InvestCard";
 import styles from "../../styles/Invest.module.css";
-import dataParser from "../../utilities/dataParser";
 
 const investments = [
   {
@@ -48,24 +47,22 @@ export default function Invest(){
           <p className={styles.introText}>Investment opportunities on this platform are available to only Professional Investors as defined in the Securities and Futures Ordinance (SFO) of Hong Kong SAR</p>
       </div>
     <div className={`container-fluid ${styles.investNow}`}>
-      {/* Populate x3 images wide grid */}
+      <div className="row">
       {investments?
-      dataParser(investments, 3).map(
-        (row,idx) =>
-          <div className="row" key={idx}>
-            {row.map((item,idx) =>
-              <InvestCard
-              key={idx}
-              hashtag={item.hashtag}
-              projectName={item.projectName}
-              image={item.image}
-              logo={item.logo}
-              headline={item.headline}
-              />
-            )}
-          </div>
+      investments.map((i,idx)=>{
+        return(
+          <InvestCard
+            key={idx}
+            hashtag={i.hashtag}
+            projectName={i.projectName}
+            image={i.image}
+            logo={i.logo}
+            headline={i.headline}
+          /> 
         )
+      })
         :null}
+      </div>
       </div>
     </div>
     )
